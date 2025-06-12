@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:title="Recipe App"
+        app:titleTextColor="@android:color/white"
+        app:menu="@menu/main_menu"
+        app:elevation="4dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+
+    <!-- Stylish Header -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="?attr/colorPrimary">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Secret Recipe"
+            android:padding="20dp"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="?attr/colorOnPrimaryContainer"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.08"
+            android:background="?attr/colorPrimaryContainer"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Dropdown Filter -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/recipeTypeDropdownLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Filter by recipe type"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="dropdown_menu">
+
+        <AutoCompleteTextView
+            android:id="@+id/recipeTypeDropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:focusable="false"
+            android:padding="12dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="12dp"
+        android:clipToPadding="false"/>
+
+    <!-- Add Button -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/addRecipeFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:text="New Recipe"
+            android:contentDescription="Add Recipe"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"/>
+    </FrameLayout>
+</LinearLayout>

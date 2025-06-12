@@ -1,0 +1,10 @@
+[
+  { "name": "Breakfast" },
+  { "name": "Lunch" },
+  { "name": "Dinner" },
+  { "name": "Dessert" },
+  { "name": "Snack" },
+  { "name": "Beverage" },
+  { "name": "Salad" },
+  { "name": "Soup" }
+]

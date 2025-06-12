@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/viewRecipeImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Recipe Image"
+            android:src="@drawable/placeholder_image"
+            android:background="?attr/colorSurfaceVariant"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/viewRecipeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recipe Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/viewRecipeType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type: Dessert"
+            android:textStyle="italic"
+            android:textColor="?attr/colorSecondary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Ingredients Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/viewRecipeIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Ingredient 1\n• Ingredient 2"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Steps Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Steps"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/viewRecipeSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Step one.\n2. Step two."
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
